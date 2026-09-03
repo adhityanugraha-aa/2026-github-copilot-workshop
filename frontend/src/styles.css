@@ -240,6 +240,11 @@ td a {
   color: var(--white);
 }
 
+.btn-secondary {
+  background: #fdb702;
+  color: var(--white);
+}
+
 .btn-outline {
   background: var(--white);
   color: var(--text);
