@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eu
+
+repository_root=$(git rev-parse --show-toplevel)
+cd "$repository_root"
+
+echo "Running npm test before push..."
+if [ "${OS:-}" = "Windows_NT" ]; then
+	npm.cmd test
+else
+	npm test
+fi
+
+echo "Tests passed. Push may continue."
